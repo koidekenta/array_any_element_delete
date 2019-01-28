@@ -1,6 +1,6 @@
 <?php
 
-$arr = [0,3.0,1,"",2,null,true,"str","key" => "value","key2" => [0,1]];
+$arr = [0,3.0,1,"",2,null,true,"str"];
 
 function array_any_element_delete($delete_element, $arr){
   $new_arr = [];
@@ -10,7 +10,7 @@ function array_any_element_delete($delete_element, $arr){
     foreach($arr as $key => $value){
       $new_arr[$key] = $value;
     }
-    return $new_arr;
+    return array_values($new_arr);
   }
   return false;
 }
@@ -28,13 +28,7 @@ Array
     [4] => 2
     [5] => 
     [6] => 1
-    [key] => value
-    [key2] => Array
-        (
-            [0] => 0
-            [1] => 1
-        )
-
+)
 
 */
 
