@@ -16,5 +16,23 @@ function array_any_element_delete($delete_element, $arr){
 }
 
 print_r(array_any_element_delete("str",$arr));
-  
+
+/*
+
+Array
+(
+    [0] => 0
+    [1] => 1
+    [2] => 2
+    [3] => 3
+    [key] => value
+    [key2] => Array
+        (
+            [0] => 0
+            [1] => 1
+        )
+
+)
+
+*/
 ?>
