@@ -1,0 +1,2 @@
+# php_array_any_element_delete
+配列内にある文字列を削除して新たな配列を作成して返す関数
