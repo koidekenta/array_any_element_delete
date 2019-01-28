@@ -11,6 +11,7 @@ class MainTest extends TestCase{
 		$this->assertIsArray($result);
 
 		$result = array_any_element_delete("value",$arr);
+		$this->assertArrayHasKey("key2",$result);
 		$this->assertArrayNotHasKey("key",$result);
 	}
 }
