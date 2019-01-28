@@ -13,6 +13,7 @@ function array_any_element_delete($delete_element, $arr){
     return $new_arr;
   }
   return false;
-}
 
+print_r(array_any_element_delete("str",$arr));
+  
 ?>
