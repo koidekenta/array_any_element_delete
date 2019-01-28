@@ -9,6 +9,9 @@ class MainTest extends TestCase{
 
 		$result = array_any_element_delete(0,$arr);
 		$this->assertIsArray($result);
+
+		$result = array_any_element_delete("value",$arr);
+		$this->assertArrayNotHasKey("key",$result);
 	}
 }
 ?>
