@@ -10,7 +10,7 @@
     <?php
     
     $arr = [5,"str",0.9];
-    $new_arr = php_array_any_element_delete("str",$arr); # [5, 0.9]
+    $new_arr = array_any_element_delete("str",$arr); # [5, 0.9]
     
     ?>
 
