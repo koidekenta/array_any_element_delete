@@ -1,4 +1,4 @@
-# php_array_any_element_delete
+# array_any_element_delete
 配列内にある値を削除して新たな配列を作成して返す関数<br />
 **※配列のキーが数字である配列(普通の配列)限定の関数です**<br /><br />
 
