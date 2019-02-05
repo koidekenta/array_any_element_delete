@@ -1,13 +1,10 @@
 <?php
 
-$arr = [0,3.0,1,"",2,null,true,"str"];
-
 function array_any_element_delete($delete_element,$arr,$option = false){
-
 $new_arr = [];
+$count = 0;
 
 $discover_indexes = array_keys($arr,$delete_element);
-
 if(count($discover_indexes) !== 0){
   foreach($discover_indexes as $value){
     unset($arr[$value]);
@@ -17,14 +14,19 @@ if(count($discover_indexes) !== 0){
   }
   
   foreach($arr as $key => $value){
-    $new_arr[$key] = $value;
+    if(is_string($key)){
+      $new_arr[$key] = $value;
+    }else{
+      $new_arr[$count] = $value;
+      $count++;
+    }
   }
-
-  return array_values($new_arr);
+  return $new_arr;
 }
 return false;
-
 }
+
+$arr = [0,3.0,1,"",2,null,true,"str"];
 
 print_r(array_any_element_delete("str", $arr));
 
