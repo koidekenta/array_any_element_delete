@@ -1,6 +1,6 @@
 <?php
 
-$arr = [0,3.0,1,"",2,null,true,"str",["orange","apple","banana"]];
+$arr = [0,3.0,1,"",2,null,true,"str"];
 
 function array_any_element_delete($delete_element, $arr){
   $new_arr = [];
@@ -28,14 +28,7 @@ Array
     [4] => 2
     [5] => 
     [6] => 1
-    [7] => Array
-        (
-            [0] => orange
-            [1] => apple
-            [2] => banana
-        )
 
-)
 
 */
 
