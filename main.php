@@ -8,7 +8,7 @@ $discover_indexes = array_keys($arr,$delete_element);
 if(count($discover_indexes) !== 0){
   foreach($discover_indexes as $value){
     unset($arr[$value]);
-    if($option === true){
+    if($option !== true){
       break;
     }
   }
