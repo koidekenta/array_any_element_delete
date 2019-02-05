@@ -26,7 +26,7 @@ if(count($discover_indexes) !== 0){
 return false;
 }
 
-$arr = [0,3.0,1,"",2,null,true,"str"];
+$arr = ["str",5,2.5,3.0,"str3",true,false,"str",null,"","key2" => "value","key" => "value","banana","apple","str"];
 
 print_r(array_any_element_delete("str", $arr));
 
@@ -34,15 +34,42 @@ print_r(array_any_element_delete("str", $arr));
 
 Array
 (
-    [0] => 0
-    [1] => 3
-    [2] => 1
-    [3] => 
-    [4] => 2
+    [0] => 5
+    [1] => 2.5
+    [2] => 3
+    [3] => str3
+    [4] => 1
     [5] => 
-    [6] => 1
-
+    [6] => str
+    [7] => 
+    [8] => 
+    [key2] => value
+    [key] => value
+    [9] => banana
+    [10] => apple
+    [11] => str
+)
 
 */
 
+print_r(array_any_element_delete("str", $arr, true));
+
+/*
+
+Array
+(
+    [0] => 5
+    [1] => 2.5
+    [2] => 3
+    [3] => str3
+    [4] => 
+    [5] => 
+    [6] => 
+    [key2] => value
+    [key] => value
+    [7] => banana
+    [8] => apple
+)
+
+*/
 ?>
