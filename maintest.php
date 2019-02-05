@@ -5,14 +5,13 @@ use PHPUnit\Framework\TestCase;
 
 class MainTest extends TestCase{
 	public function test_one(){
-		$arr = [0,1,2,3,"str","key" => "value","key2" => [0,1]];
+		$arr = ["apple", "orange", "grape", "banana"];
 
-		$result = array_any_element_delete(0,$arr);
+		$result = array_any_element_delete("orange",$arr);
 		$this->assertIsArray($result);
-
-		$result = array_any_element_delete("value",$arr);
-		$this->assertArrayHasKey("key2",$result);
-		$this->assertArrayNotHasKey("key",$result);
+		$this->assertContains("apple",$result);
+		$this->assertContains("orange",$result);
+		$this->assertNotContains("orange",$result);
 	}
 }
 ?>
