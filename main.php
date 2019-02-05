@@ -2,17 +2,28 @@
 
 $arr = [0,3.0,1,"",2,null,true,"str"];
 
-function array_any_element_delete($delete_element, $arr){
-  $new_arr = [];
-  if(array_search($delete_element, $arr, true) !== false){
-    $discover_key = array_search($delete_element, $arr, true);
-    unset($arr[$discover_key]);
-    foreach($arr as $key => $value){
-      $new_arr[$key] = $value;
+function array_any_element_delete($delete_element,$arr,$option = false){
+
+$new_arr = [];
+
+$discover_indexes = array_keys($arr,$delete_element);
+
+if(count($discover_indexes) !== 0){
+  foreach($discover_indexes as $value){
+    unset($arr[$value]);
+    if($option === true){
+      break;
     }
-    return array_values($new_arr);
   }
-  return false;
+  
+  foreach($arr as $key => $value){
+    $new_arr[$key] = $value;
+  }
+
+  return array_values($new_arr);
+}
+return false;
+
 }
 
 print_r(array_any_element_delete("str", $arr));
