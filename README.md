@@ -8,9 +8,10 @@
 <br />
 
     <?php
+    
     $arr = [5,"str",0.9];
-    $new_arr = php_array_any_element_delete("str",$arr);
-    $new_arr # [5, 0.9]
+    $new_arr = php_array_any_element_delete("str",$arr); # [5, 0.9]
+    
     ?>
 
 削除したい値が複数ある場合、先頭の値のみが削除されます。
